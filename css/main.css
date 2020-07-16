@@ -29,15 +29,19 @@ h4 {
 	text-transform: uppercase;
 	font-weight: 700;
 }
+
 h1 {
 	font-size: 1.875em;
 }
+
 h2 {
     font-size: 1.5em;
 }
+
 h3 {
 	font-size: 1.125em;
 }
+
 h4 {
 	font-size: .75em;
 }
@@ -76,10 +80,12 @@ header h1 span {
 header nav {
 	padding: 15px 0;
 }
+
 header nav ul {
 	margin: 0;
 	padding: 0;
 }
+
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
@@ -90,6 +96,7 @@ header nav ul li {
 	justify-content: center;
 	align-items: center;
 }
+
 header nav ul li a{
 	text-decoration: none;
 	color:#77a466;
@@ -110,23 +117,17 @@ header nav ul li a{
 	justify-content: flex-start;
 }
 
-.main-image {
-
-}
-
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
-
-}
 .main-title h3 {
 	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
 }
+
 .main-title p {
 	padding: 0;
 	font-size: 1em;
@@ -149,11 +150,6 @@ header nav ul li a{
 	padding: 0 0;
 	display: flex;
 	flex-basis: 100%;
-}
-
-.section-two {
-	/* border-left: 1px solid #eee;
-	border-right: 1px solid #eee; */
 }
 
 .section-two h4,
@@ -200,4 +196,58 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+/***** TABLETS *****/
+@media all and (min-width: 768px) {
+	/*comment out header nav ul block for stacked mobile menu*/
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.bottom-section {
+		justify-content: space-between;
+		align-items: flex-start; 
+		border-top: 1px solid #eee;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		flex-basis: 30%;
+		border-top: none;
+	}
+	
+	.section-one h4 {
+		padding: 10px 0;
+	}
+	
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+		padding: 0 25px;
+	}
+}
+
+/***** DESKTOP *****/
+@media all and (min-width: 1200px) {
+	/*heading option one*/
+	header {
+		justify-content: flex-start;
+		flex-flow: row;
+	}
+
+	header h1 {
+		display: flex;
+		justify-content: flex-start;
+		border-bottom: none;
+	}
+
+	/*to enable heading option two, comment out header and header h1 blocks*/
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
 }
